@@ -1,0 +1,44 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "tailwindcss"
+    ],
+    "rules": {
+		"indent": ["error", 4],
+		"space-before-function-paren": [
+			"error",
+			{
+				"anonymous": "always",
+				"named": "never",
+				"asyncArrow": "always"
+			}
+		],
+		"semi": ["error", "always"],
+		"comma-dangle": ["error", "only-multiline"],
+		"no-unused-vars": ["warn", { "vars": "all", "args": "none" }],
+		"operator-linebreak": ["error", "after"],
+		"multiline-ternary": ["error", "always-multiline"],
+		"no-extra-semi": "error",
+		"react/prop-types": "off",
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
+        "tailwindcss/enforces-shorthand": "warn",
+        "tailwindcss/no-contradicting-classname": "warn"
+	}
+}
