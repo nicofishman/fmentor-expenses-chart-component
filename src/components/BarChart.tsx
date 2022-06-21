@@ -8,7 +8,9 @@ const BarChart: FC<{
     return (
         <div className='sm:mt-10 sm:mb-2 sm:py-3 py-3 my-5 flex flex-row items-end justify-around'>
             {daysArray.map((day, index) => {
-                const isDay = nowDate.getDay() === index - 6;
+                let fechaDeHoy = nowDate.getDay() - 1;
+                if (nowDate.getDay() === 0) fechaDeHoy = 6;
+                const isDay = fechaDeHoy === index;
                 const height = `${(day.amount * 4).toFixed()}px`;
                 return (
                     <div className='flex flex-col items-center relative' key={index}>

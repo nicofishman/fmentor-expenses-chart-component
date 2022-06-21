@@ -8,7 +8,7 @@ const MainChart: FC<{
 }> = ({ daysArray }) => {
     const total = daysArray.reduce((acc, day) => acc + day.amount, 0);
     return (
-        <div className="bg-pale-orange w-mob sm:w-def h-auto rounded-xl pt-6 px-10">
+        <div className="w-mob sm:w-def h-auto bg-pale-orange rounded-xl pt-6 px-10">
             <span className="sm:text-3xl text-xl">Spendings - Last 7 days</span>
             <BarChart daysArray={daysArray} />
             <hr />
